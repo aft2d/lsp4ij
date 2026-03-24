@@ -1,0 +1,19 @@
+{
+  "ansible.ansible.path": "ansible",
+  "ansible.ansible.useFullyQualifiedCollectionNames": true,
+  "ansible.python.interpreterPath": "",
+  "ansible.python.activationScript": "",
+  "ansible.executionEnvironment.containerEngine": "auto",
+  "ansible.executionEnvironment.enabled": false,
+  "ansible.executionEnvironment.image": "ghcr.io/ansible/creator-ee:latest",
+  "ansible.executionEnvironment.pull.policy": "missing",
+  "ansible.executionEnvironment.pull.arguments": "",
+  "ansible.executionEnvironment.containerOptions": "",
+  "ansible.completion.provideRedirectModules": true,
+  "ansible.completion.provideModuleOptionAliases": true,
+  "ansible.validation.enabled": true,
+  "ansible.validation.lint.enabled": true,
+  "ansible.validation.lint.path": "ansible-lint",
+  "ansible.validation.lint.arguments": "",
+  "ansible.executionEnvironment.volumeMounts": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "ansible-language-server",
+  "name": "Ansible Language Server",
+  "programArgs": {
+    "default": "$USER_HOME$/.lsp4ij/lsp/ansible-language-server/node_modules/.bin/ansible-language-server --stdio"
+  },
+  "expandConfiguration": true,
+  "fileTypeMappings": [
+    {
+      "fileType": {
+        "patterns": [
+          "*.yml",
+          "*.yaml"
+        ]
+      },
+      "languageId": "ansible"
+    }
+  ]
+}

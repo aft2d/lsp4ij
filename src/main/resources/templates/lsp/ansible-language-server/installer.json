@@ -1,0 +1,36 @@
+{
+  "id": "ansible-language-server",
+  "name": "Ansible Language Server",
+  "executeOnStartServer": false,
+  "properties": {
+    "workingDir" : "$USER_HOME$/.lsp4ij/lsp/ansible-language-server"
+  },
+  "check": {
+    "exec": {
+      "name": "Trying current command",
+      "command": "${server.command}",
+      "timeout": 2000
+    }
+  },
+  "run": {
+    "exec": {
+      "name": "Install Ansible Language Server",
+      "workingDir": "${workingDir}",
+      "ignoreStderr": true,
+      "command": {
+        "windows": "npm.cmd install @ansible/ansible-language-server --force",
+        "default": "npm install @ansible/ansible-language-server --force"
+      },
+      "onSuccess": {
+        "configureServer": {
+          "name": "Configure Ansible Language Server command",
+          "command": {
+            "windows": "${workingDir}/node_modules/.bin/ansible-language-server.cmd --stdio",
+            "default": "${workingDir}/node_modules/.bin/ansible-language-server --stdio"
+          },
+          "update": true
+        }
+      }
+    }
+  }
+}
